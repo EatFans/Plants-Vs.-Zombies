@@ -1,0 +1,11 @@
+# ninja log v5
+2269	2587	7214131546527923	Plants_Vs__Zombies.exe	6e19524ce22944fd
+1	316	7214190408124451	build.ninja	db167ae4d6589fa
+0	1264	7214036739737691	CMakeFiles/Plants_Vs__Zombies.dir/src/GameManager.cpp.obj	f8b1e75a44b28c1a
+0	1480	7214029709666199	CMakeFiles/Plants_Vs__Zombies.dir/src/main.cpp.obj	ccea397055444317
+48	2268	7214131543403439	CMakeFiles/Plants_Vs__Zombies.dir/src/Game.cpp.obj	f8d9e365f4188329
+154	7396	7214131102496222	CMakeFiles/Plants_Vs__Zombies.dir/src/LogManager.cpp.obj	3ac8caeea5cca8cd
+8	6068	7214192327695092	CMakeFiles/Plants_Vs__Zombies.dir/src/Game.cpp.obj	f8d9e365f4188329
+6072	6663	7214192333568983	Plants_Vs__Zombies.exe	5bcf7c3274c259f4
+6	4399	7214210270500352	CMakeFiles/Plants_Vs__Zombies.dir/src/Game.cpp.obj	f8d9e365f4188329
+4400	4677	7214210273175002	Plants_Vs__Zombies.exe	5bcf7c3274c259f4
