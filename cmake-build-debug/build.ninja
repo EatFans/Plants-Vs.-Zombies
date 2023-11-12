@@ -101,7 +101,8 @@ build CMakeFiles/Plants_Vs__Zombies.dir/src/Scene.cpp.obj: CXX_COMPILER__Plants_
 
 build Plants_Vs__Zombies.exe: CXX_EXECUTABLE_LINKER__Plants_Vs__Zombies_Debug CMakeFiles/Plants_Vs__Zombies.dir/src/Game.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/LogManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/ResourceManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/SceneManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/test/test.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/Scene.cpp.obj
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-Bstatic  -leasyx  -Wl,-Bdynamic  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_FLAGS = -static-libgcc -static-libstdc++
+  LINK_LIBRARIES = -Wl,-Bstatic  -leasyx  -lpthread  -Wl,-Bdynamic  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -L"B:/Clion Projects/Plants-Vs.-Zombies/lib/EasyX/lib64"
   OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
   POST_BUILD = cd .

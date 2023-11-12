@@ -16,11 +16,11 @@ ResourceManager::ResourceManager() {
  * 构析函数，释放清理已经分配的图片内存
  */
 ResourceManager::~ResourceManager() {
-    delete image;
     for (auto& pair : imageMap){
         delete pair.second;
     }
     imageMap.clear();
+    delete image;
 }
 
 /**
@@ -28,7 +28,7 @@ ResourceManager::~ResourceManager() {
  * @param resourceName 图片资源名称 string类型
  * @param resourcePath 图片资源路径 string类型
  */
-void ResourceManager::loadRes(const std::string& resourceName,const std::string& resourcePath) {
+void ResourceManager::loadImg(const std::string& resourceName,const std::string& resourcePath) {
     auto it = imageMap.find(resourceName);
     if (it == imageMap.end()){
         loadimage(image,resourcePath.c_str());
@@ -43,7 +43,7 @@ void ResourceManager::loadRes(const std::string& resourceName,const std::string&
  * @param resourceName 图片资源名称 string类型
  * @return 返回一个图片资源的指针
  */
-IMAGE* ResourceManager::getRes(const std::string &resourceName) {
+IMAGE* ResourceManager::getImg(const std::string &resourceName) {
     auto it = imageMap.find(resourceName);
     if (it != imageMap.end()){
         LogManager::info("已获取"+resourceName+"图片资源");
@@ -52,3 +52,4 @@ IMAGE* ResourceManager::getRes(const std::string &resourceName) {
         return nullptr;
     }
 }
+

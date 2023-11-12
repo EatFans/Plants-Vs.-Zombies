@@ -3,6 +3,9 @@ project(Plants_Vs__Zombies)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# 给libgcc、libstdc++库链接静态库
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+
 # 设置源文件
 set(SOURCES
         src/Game.cpp
@@ -21,3 +24,6 @@ link_directories(lib/EasyX/lib64)
 link_libraries(libeasyx.a)
 
 add_executable(Plants_Vs__Zombies ${SOURCES})
+
+#链接线程库（必须放到最后）
+target_link_libraries(Plants_Vs__Zombies libpthread.a)

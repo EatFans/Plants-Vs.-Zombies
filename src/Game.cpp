@@ -26,7 +26,7 @@ void Game::mainLoop() {
 // 游戏渲染
 void Game::renderLoop() {
     LogManager::info("游戏渲染线程已经启动！");
-    IMAGE* image = res->getRes("hub");
+    IMAGE* image = res->getImg("hub");
     while(runFlag){
 
         putimage(0,0,image);
@@ -57,7 +57,7 @@ void Game::run() {
 }
 
 void Game::init() {
-    res->loadRes("hub","res/ui/hub.png");
+    res->loadImg("hub","res/ui/hub.png");
 }
 
 int main() {

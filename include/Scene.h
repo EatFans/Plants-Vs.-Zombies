@@ -23,8 +23,7 @@ public:
 private:
     int x;
     int y;
-    std::string name;
-    ResourceManager* res;
+    std::string sceneName;
 };
 
 

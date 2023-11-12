@@ -18,7 +18,6 @@ public:
     ~Game();
     void init();
     void run();
-    bool isRunning();
 private:
     void mainLoop();
     void renderLoop();

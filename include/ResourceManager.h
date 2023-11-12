@@ -15,8 +15,9 @@ class ResourceManager {
 public:
     ResourceManager();
     ~ResourceManager();
-    void loadRes(const std::string& resourceName,const std::string& resourcePath);
-    IMAGE* getRes(const std::string& resourceName);
+
+    void loadImg(const std::string& resourceName,const std::string& resourcePath);
+    IMAGE* getImg(const std::string& resourceName);
 private:
     IMAGE* image;
     std::map<std::string, IMAGE*> imageMap;

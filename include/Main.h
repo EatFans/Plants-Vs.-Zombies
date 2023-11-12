@@ -5,6 +5,6 @@
 #ifndef PLANTS_VS__ZOMBIES_MAIN_H
 #define PLANTS_VS__ZOMBIES_MAIN_H
 
-#define DELAY_TIME 16 // —”≥Ÿ ±º‰
+#define DELAY_TIME 16
 
 #endif //PLANTS_VS__ZOMBIES_MAIN_H

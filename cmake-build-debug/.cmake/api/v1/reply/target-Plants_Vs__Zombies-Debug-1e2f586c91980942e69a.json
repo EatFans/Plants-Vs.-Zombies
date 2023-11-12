@@ -15,6 +15,7 @@
 		[
 			"add_executable",
 			"link_directories",
+			"target_link_libraries",
 			"include_directories"
 		],
 		"files" : 
@@ -29,19 +30,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 20,
+				"line" : 22,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 17,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 19,
 				"parent" : 0
 			}
 		]
@@ -58,7 +65,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "B:/Clion Projects/Plants-Vs.-Zombies/include"
 				}
 			],
@@ -92,7 +99,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "",
+				"fragment" : "-static-libgcc -static-libstdc++",
 				"role" : "flags"
 			},
 			{
@@ -107,6 +114,11 @@
 			{
 				"backtrace" : 1,
 				"fragment" : "-leasyx",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lpthread",
 				"role" : "libraries"
 			},
 			{

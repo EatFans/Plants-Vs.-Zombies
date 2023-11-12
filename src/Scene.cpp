@@ -5,7 +5,6 @@
 #include "Scene.h"
 
 Scene::Scene() {
-    res = new ResourceManager();
 
 }
 
