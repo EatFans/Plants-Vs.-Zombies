@@ -6,7 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 # 设置源文件
 set(SOURCES
         src/Game.cpp
-        src/LogManager.cpp include/LogManager.h)
+        src/LogManager.cpp
+        src/engine/ResourceManager.cpp
+        src/engine/SceneManager.cpp
+        test/test.cpp
+        src/Scene.cpp
+        src/engine/GameObject.cpp)
 
 # 设置头文件目录
 include_directories(include)
