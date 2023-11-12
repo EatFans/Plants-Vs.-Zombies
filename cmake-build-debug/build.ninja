@@ -63,6 +63,41 @@ build CMakeFiles/Plants_Vs__Zombies.dir/src/LogManager.cpp.obj: CXX_COMPILER__Pl
   OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
   OBJECT_FILE_DIR = CMakeFiles\Plants_Vs__Zombies.dir\src
 
+build CMakeFiles/Plants_Vs__Zombies.dir/src/engine/ResourceManager.cpp.obj: CXX_COMPILER__Plants_Vs__Zombies_Debug B$:/Clion$ Projects/Plants-Vs.-Zombies/src/engine/ResourceManager.cpp || cmake_object_order_depends_target_Plants_Vs__Zombies
+  DEP_FILE = CMakeFiles\Plants_Vs__Zombies.dir\src\engine\ResourceManager.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"B:/Clion Projects/Plants-Vs.-Zombies/include"
+  OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
+  OBJECT_FILE_DIR = CMakeFiles\Plants_Vs__Zombies.dir\src\engine
+
+build CMakeFiles/Plants_Vs__Zombies.dir/src/engine/SceneManager.cpp.obj: CXX_COMPILER__Plants_Vs__Zombies_Debug B$:/Clion$ Projects/Plants-Vs.-Zombies/src/engine/SceneManager.cpp || cmake_object_order_depends_target_Plants_Vs__Zombies
+  DEP_FILE = CMakeFiles\Plants_Vs__Zombies.dir\src\engine\SceneManager.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"B:/Clion Projects/Plants-Vs.-Zombies/include"
+  OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
+  OBJECT_FILE_DIR = CMakeFiles\Plants_Vs__Zombies.dir\src\engine
+
+build CMakeFiles/Plants_Vs__Zombies.dir/test/test.cpp.obj: CXX_COMPILER__Plants_Vs__Zombies_Debug B$:/Clion$ Projects/Plants-Vs.-Zombies/test/test.cpp || cmake_object_order_depends_target_Plants_Vs__Zombies
+  DEP_FILE = CMakeFiles\Plants_Vs__Zombies.dir\test\test.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"B:/Clion Projects/Plants-Vs.-Zombies/include"
+  OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
+  OBJECT_FILE_DIR = CMakeFiles\Plants_Vs__Zombies.dir\test
+
+build CMakeFiles/Plants_Vs__Zombies.dir/src/Scene.cpp.obj: CXX_COMPILER__Plants_Vs__Zombies_Debug B$:/Clion$ Projects/Plants-Vs.-Zombies/src/Scene.cpp || cmake_object_order_depends_target_Plants_Vs__Zombies
+  DEP_FILE = CMakeFiles\Plants_Vs__Zombies.dir\src\Scene.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"B:/Clion Projects/Plants-Vs.-Zombies/include"
+  OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
+  OBJECT_FILE_DIR = CMakeFiles\Plants_Vs__Zombies.dir\src
+
+build CMakeFiles/Plants_Vs__Zombies.dir/src/engine/GameObject.cpp.obj: CXX_COMPILER__Plants_Vs__Zombies_Debug B$:/Clion$ Projects/Plants-Vs.-Zombies/src/engine/GameObject.cpp || cmake_object_order_depends_target_Plants_Vs__Zombies
+  DEP_FILE = CMakeFiles\Plants_Vs__Zombies.dir\src\engine\GameObject.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"B:/Clion Projects/Plants-Vs.-Zombies/include"
+  OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
+  OBJECT_FILE_DIR = CMakeFiles\Plants_Vs__Zombies.dir\src\engine
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Plants_Vs__Zombies
@@ -71,7 +106,7 @@ build CMakeFiles/Plants_Vs__Zombies.dir/src/LogManager.cpp.obj: CXX_COMPILER__Pl
 #############################################
 # Link the executable Plants_Vs__Zombies.exe
 
-build Plants_Vs__Zombies.exe: CXX_EXECUTABLE_LINKER__Plants_Vs__Zombies_Debug CMakeFiles/Plants_Vs__Zombies.dir/src/Game.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/LogManager.cpp.obj
+build Plants_Vs__Zombies.exe: CXX_EXECUTABLE_LINKER__Plants_Vs__Zombies_Debug CMakeFiles/Plants_Vs__Zombies.dir/src/Game.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/LogManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/ResourceManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/SceneManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/test/test.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/Scene.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/GameObject.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-Bstatic  -leasyx  -Wl,-Bdynamic  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -L"B:/Clion Projects/Plants-Vs.-Zombies/lib/EasyX/lib64"
