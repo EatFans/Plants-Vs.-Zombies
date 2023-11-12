@@ -8,15 +8,23 @@
 #include <unordered_map>
 #include <string>
 #include <vector>
-#include "GameObject.h"
+#include "ResourceManager.h"
+
+enum class SceneType {
+    Hub,
+    Level
+};
 
 class Scene {
 public:
     Scene();
     ~Scene();
-    void addGameObject(GameObject* gameObject);
+    void render();
 private:
-    std::vector<GameObject*> gameObject;
+    int x;
+    int y;
+    std::string name;
+    ResourceManager* res;
 };
 
 

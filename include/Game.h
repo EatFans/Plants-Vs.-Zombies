@@ -10,18 +10,19 @@
 #include "LogManager.h"
 #include "easyx.h"
 #include "ResourceManager.h"
+#include "Main.h"
 
 class Game {
 public:
     Game();
     ~Game();
+    void init();
     void run();
-    void update();
-    void render();
-    void playAudio();
-    void input();
     bool isRunning();
 private:
+    void mainLoop();
+    void renderLoop();
+    void backgroundLoop();
     int winWidth;
     int winHeight;
     bool runFlag;

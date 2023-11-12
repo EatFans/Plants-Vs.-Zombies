@@ -5,6 +5,7 @@
 #include "Scene.h"
 
 Scene::Scene() {
+    res = new ResourceManager();
 
 }
 
@@ -12,7 +13,3 @@ Scene::~Scene() {
 
 }
 
-void Scene::addGameObject(GameObject *gameObject) {
-
-
-}

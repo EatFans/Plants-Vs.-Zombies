@@ -7,11 +7,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(SOURCES
         src/Game.cpp
         src/LogManager.cpp
-        src/engine/ResourceManager.cpp
-        src/engine/SceneManager.cpp
+        src/ResourceManager.cpp
+        src/SceneManager.cpp
         test/test.cpp
         src/Scene.cpp
-        src/engine/GameObject.cpp)
+        )
 
 # 设置头文件目录
 include_directories(include)
