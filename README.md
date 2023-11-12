@@ -7,6 +7,14 @@
 ```
 Plants-Vs.-Zombies
 |
+|----- cmake-build-debug
+|            |- res
+|               |- ui
+|               |- map
+|               |- audio
+|               |- plants
+|               |- zombies
+|
 |----- doc       // 文档
 |
 |----- include   // 头文件
@@ -18,11 +26,7 @@ Plants-Vs.-Zombies
 |           
 |
 |----- res      // 资源文件
-|       |- ui
-|       |- map
-|       |- audio
-|       |- plants
-|       |- zombies
+|       
 | 
 |----- src      // 源码文件
 |
