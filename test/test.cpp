@@ -5,9 +5,11 @@
 
 using namespace std;
 int main (){
+    initgraph(900,600,1);
     ResourceManager res;
     res.loadRes("hub","res/ui/hub.png");
-    res.getRes("hub");
+    IMAGE* hub = res.getRes("hub");
+    putimage(0,0,hub);
     system("pause");
     return 0;
 }

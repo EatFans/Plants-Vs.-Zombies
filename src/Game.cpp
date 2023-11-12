@@ -7,10 +7,11 @@
 Game::Game() : winWidth(900), winHeight(600), runFlag(true) {
     // 初始化对象，加载资源
     initgraph(winWidth,winHeight,1);
+    res = new ResourceManager();
 }
 
 Game::~Game() {
-
+    delete res;
 }
 
 

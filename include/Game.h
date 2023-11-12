@@ -9,7 +9,7 @@
 #include <thread>
 #include "LogManager.h"
 #include "easyx.h"
-
+#include "ResourceManager.h"
 
 class Game {
 public:
@@ -25,6 +25,8 @@ private:
     int winWidth;
     int winHeight;
     bool runFlag;
+    ResourceManager* res;
+
 };
 
 
