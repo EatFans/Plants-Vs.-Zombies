@@ -9,13 +9,14 @@
 #include <string>
 #include "easyx.h"
 #include "graphics.h"
+#include "LogManager.h"
 
 class ResourceManager {
 public:
     ResourceManager();
     ~ResourceManager();
     void loadRes(const std::string& resourceName,const std::string& resourcePath);
-    static IMAGE* getRes(const std::string& resourceName);
+    IMAGE* getRes(const std::string& resourceName);
 private:
     IMAGE* image;
     std::map<std::string, IMAGE*> imageMap;

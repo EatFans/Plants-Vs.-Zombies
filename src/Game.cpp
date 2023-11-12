@@ -34,10 +34,11 @@ void Game::run() {
 
 }
 
+/*
 int main(){
     //创建游戏对象
     Game game;
     game.run();
     system("pause");
     return 0;
-}
+}*/

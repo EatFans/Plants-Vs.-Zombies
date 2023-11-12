@@ -17,6 +17,10 @@ ResourceManager::ResourceManager() {
  */
 ResourceManager::~ResourceManager() {
     delete image;
+    for (auto& pair : imageMap){
+        delete pair.second;
+    }
+    imageMap.clear();
 }
 
 /**
@@ -25,7 +29,12 @@ ResourceManager::~ResourceManager() {
  * @param resourcePath 图片资源路径 string类型
  */
 void ResourceManager::loadRes(const std::string& resourceName,const std::string& resourcePath) {
-
+    auto it = imageMap.find(resourceName);
+    if (it == imageMap.end()){
+        loadimage(image,resourcePath.c_str());
+        imageMap[resourceName] = image;
+        LogManager::info("图片资源加载成功！");
+    }
 
 }
 
@@ -35,6 +44,11 @@ void ResourceManager::loadRes(const std::string& resourceName,const std::string&
  * @return 返回一个图片资源的指针
  */
 IMAGE* ResourceManager::getRes(const std::string &resourceName) {
-
-    return nullptr;
+    auto it = imageMap.find(resourceName);
+    if (it != imageMap.end()){
+        LogManager::info("已获取"+resourceName+"图片资源");
+        return it->second;
+    } else {
+        return nullptr;
+    }
 }

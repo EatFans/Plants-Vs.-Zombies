@@ -26,6 +26,8 @@ Plants-Vs.-Zombies
 | 
 |----- src      // 源码文件
 |
+|----- test    // 用于测试代码的地方
+|
 |----- CMakeLists.txt  // Cmake项目控制
 ```
 
