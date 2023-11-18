@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 # 给libgcc、libstdc++库链接静态库
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
+
 # 设置源文件
 set(SOURCES
         src/Game.cpp
@@ -18,12 +19,19 @@ set(SOURCES
 
 # 设置头文件目录
 include_directories(include)
+include_directories(include/json)
 
-# 设置库文件
-link_directories(lib/EasyX/lib64)
-link_libraries(libeasyx.a)
+# 指定链接目录
+link_directories(
+        lib/EasyX/lib64
+        lib/JsonCpp/lib64
+)
 
 add_executable(Plants_Vs__Zombies ${SOURCES})
 
 #链接线程库（必须放到最后）
-target_link_libraries(Plants_Vs__Zombies libpthread.a)
+target_link_libraries(Plants_Vs__Zombies PRIVATE
+        libeasyx.a
+        libpthread.a
+        libjsoncpp.a
+        )
