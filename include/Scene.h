@@ -10,11 +10,6 @@
 #include <vector>
 #include "ResourceManager.h"
 
-enum class SceneType {
-    Hub,
-    Level
-};
-
 class Scene {
 public:
     Scene();

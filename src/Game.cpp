@@ -14,11 +14,48 @@ Game::~Game() {
     delete res;
 }
 
+// 游戏初始化
+void Game::init() {
+    LogManager::info("游戏资源正在加载中...");
+    Json::Value resJson = ResourceManager::parseJsonFile("res/resource.json");
+    // 访问解析后的数据
+    const Json::Value resources = resJson["resources"];
+    for (const auto& resource : resources) {
+        std::string name = resource["name"].asString();
+        std::string path = resource["path"].asString();
+        res->loadImg(name,path);
+        LogManager::info(name+"图片资源已加载！");
+    }
+}
+
+// 游戏启动运行
+void Game::run() {
+    // 启动线程
+    std::thread renderThread(&Game::renderLoop,this);
+    std::thread backgroundThread(&Game::backgroundLoop,this);
+    mainLoop();
+
+    // 释放清理线程
+    renderThread.join();
+    backgroundThread.join();
+}
+
+// 游戏处理用户输入
+void Game::handlerInput() {
+    MOUSEMSG msg = GetMouseMsg();
+    if (msg.uMsg == WM_LBUTTONDOWN){
+        LogManager::info("用户正在点击鼠标");
+    }
+    if (msg.uMsg == WM_LBUTTONUP) {
+        LogManager::info("用户正在松开鼠标");
+    }
+}
+
 // 游戏主线程
 void Game::mainLoop() {
     LogManager::info("游戏主线程已经启动！");
     while(runFlag){
-
+        handlerInput();
         std::this_thread::sleep_for(std::chrono::microseconds(DELAY_TIME));
     }
 }
@@ -41,31 +78,6 @@ void Game::backgroundLoop() {
     while(runFlag){
 
         std::this_thread::sleep_for(std::chrono::microseconds(DELAY_TIME));
-    }
-}
-
-
-void Game::run() {
-    // 启动线程
-    std::thread renderThread(&Game::renderLoop,this);
-    std::thread backgroundThread(&Game::backgroundLoop,this);
-    mainLoop();
-
-    // 释放清理线程
-    renderThread.join();
-    backgroundThread.join();
-}
-
-void Game::init() {
-    LogManager::info("游戏资源正在加载中...");
-    Json::Value resJson = ResourceManager::parseJsonFile("res/resource.json");
-    // 访问解析后的数据
-    const Json::Value resources = resJson["resources"];
-    for (const auto& resource : resources) {
-        std::string name = resource["name"].asString();
-        std::string path = resource["path"].asString();
-        res->loadImg(name,path);
-        LogManager::info(name+"图片资源已加载！");
     }
 }
 

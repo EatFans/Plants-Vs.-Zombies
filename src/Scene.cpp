@@ -12,3 +12,7 @@ Scene::~Scene() {
 
 }
 
+void Scene::render() {
+
+
+}
