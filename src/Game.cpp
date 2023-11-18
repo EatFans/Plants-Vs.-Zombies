@@ -56,6 +56,7 @@ void Game::mainLoop() {
     LogManager::info("游戏主线程已经启动！");
     while(runFlag){
         handlerInput();
+
         std::this_thread::sleep_for(std::chrono::microseconds(DELAY_TIME));
     }
 }

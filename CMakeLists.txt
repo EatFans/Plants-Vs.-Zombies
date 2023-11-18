@@ -11,11 +11,11 @@ set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 set(SOURCES
         src/Game.cpp
         src/LogManager.cpp
-        src/ResourceManager.cpp
-        src/SceneManager.cpp
+        src/engine/ResourceManager.cpp
+        src/engine/SceneManager.cpp
         test/test.cpp
         src/Scene.cpp
-        )
+        include/InputHandler.h)
 
 # 设置头文件目录
 include_directories(include)
