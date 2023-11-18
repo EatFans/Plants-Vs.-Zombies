@@ -57,10 +57,18 @@ void Game::run() {
 }
 
 void Game::init() {
-    res->loadImg("hub","res/ui/hub.png");
+    LogManager::info("游戏资源正在加载中...");
+    Json::Value resJson = ResourceManager::parseJsonFile("res/resource.json");
+    // 访问解析后的数据
+    const Json::Value resources = resJson["resources"];
+    for (const auto& resource : resources) {
+        std::string name = resource["name"].asString();
+        std::string path = resource["path"].asString();
+        res->loadImg(name,path);
+        LogManager::info(name+"图片资源已加载！");
+    }
 }
 
-/*
 int main() {
     //创建游戏对象
     Game game;
@@ -69,4 +77,3 @@ int main() {
     system("pause");
     return 0;
 }
-*/

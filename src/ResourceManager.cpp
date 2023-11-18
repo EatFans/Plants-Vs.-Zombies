@@ -34,7 +34,7 @@ void ResourceManager::loadImg(const std::string& resourceName,const std::string&
     if (it == imageMap.end()){
         loadimage(image,resourcePath.c_str());
         imageMap[resourceName] = image;
-        LogManager::info("图片资源加载成功！");
+//        LogManager::info("图片资源加载成功！");
     }
 
 }
@@ -47,7 +47,6 @@ void ResourceManager::loadImg(const std::string& resourceName,const std::string&
 IMAGE* ResourceManager::getImg(const std::string &resourceName) {
     auto it = imageMap.find(resourceName);
     if (it != imageMap.end()){
-        LogManager::info("已获取"+resourceName+"图片资源");
         return it->second;
     } else {
         return nullptr;

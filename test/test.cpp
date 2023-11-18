@@ -1,3 +1,4 @@
+/*
 #include "json/json.h"
 #include "ResourceManager.h"
 #include "LogManager.h"
@@ -17,3 +18,4 @@ int main(){
     system("pause");
     return 0;
 }
+*/
