@@ -1,3 +1,12 @@
 {
-	"hub" : "res/ui/hub.png"
+	"resources": [
+		{
+			"name": "hub",
+			"path": "res/ui/hub.png"
+		},
+		{
+			"name": "button",
+			"path": "res/ui/button.png"
+		}
+	]
 }

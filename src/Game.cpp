@@ -60,6 +60,7 @@ void Game::init() {
     res->loadImg("hub","res/ui/hub.png");
 }
 
+/*
 int main() {
     //创建游戏对象
     Game game;
@@ -68,3 +69,4 @@ int main() {
     system("pause");
     return 0;
 }
+*/

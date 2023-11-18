@@ -29,7 +29,7 @@ link_directories(
 
 add_executable(Plants_Vs__Zombies ${SOURCES})
 
-#链接线程库（必须放到最后）
+#链接库
 target_link_libraries(Plants_Vs__Zombies PRIVATE
         libeasyx.a
         libpthread.a
