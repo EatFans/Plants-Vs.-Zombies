@@ -14,8 +14,8 @@ set(SOURCES
         src/engine/ResourceManager.cpp
         src/engine/SceneManager.cpp
         test/test.cpp
-        src/Scene.cpp
-        include/InputHandler.h)
+        src/engine/InputHandler.cpp
+        src/HubScene.cpp)
 
 # 设置头文件目录
 include_directories(include)
