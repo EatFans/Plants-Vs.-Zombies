@@ -7,7 +7,7 @@
 
 class InputHandler {
 public:
-    void MouseClick()
+    void MouseClick();
 private:
 };
 
