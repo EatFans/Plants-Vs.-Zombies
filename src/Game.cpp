@@ -43,12 +43,6 @@ void Game::run() {
     backgroundThread.join();
 }
 
-// 游戏处理用户输入
-void Game::handlerInput() {
-    inputHandler->MouseHandler();
-    inputHandler->getMouseLeftButtonState();
-}
-
 // 游戏主线程
 void Game::mainLoop() {
     LogManager::info("游戏主线程已经启动！");
@@ -75,7 +69,8 @@ void Game::renderLoop() {
 void Game::backgroundLoop() {
     LogManager::info("游戏后台线程已经启动！");
     while(runFlag){
-        handlerInput();
+        inputHandler->MouseHandler();
+        inputHandler->getMouseLeftButtonState();
         std::this_thread::sleep_for(std::chrono::microseconds(DELAY_TIME));
     }
 }

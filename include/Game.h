@@ -25,7 +25,6 @@ private:
     void mainLoop();
     void renderLoop();
     void backgroundLoop();
-    void handlerInput();
     int winWidth;
     int winHeight;
     bool runFlag;
