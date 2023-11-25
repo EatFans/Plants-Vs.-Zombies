@@ -8,10 +8,12 @@ Game::Game() : winWidth(WIN_WIDTH), winHeight(WIN_HEIGHT), runFlag(true) {
     // 初始化对象，加载资源
     initgraph(winWidth,winHeight,1);
     res = new ResourceManager();
+    inputHandler = new InputHandler();
 }
 
 Game::~Game() {
     delete res;
+    delete inputHandler;
 }
 
 // 游戏初始化
@@ -42,13 +44,8 @@ void Game::run() {
 
 // 游戏处理用户输入
 void Game::handlerInput() {
-    MOUSEMSG msg = GetMouseMsg();
-    if (msg.uMsg == WM_LBUTTONDOWN){
-        LogManager::info("用户正在点击鼠标");
-    }
-    if (msg.uMsg == WM_LBUTTONUP) {
-        LogManager::info("用户正在松开鼠标");
-    }
+    inputHandler->MouseHandler();
+    inputHandler->getMouseLeftButtonState();
 }
 
 // 游戏主线程

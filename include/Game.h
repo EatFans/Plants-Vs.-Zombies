@@ -14,6 +14,7 @@
 #include "LogManager.h"
 #include "easyx.h"
 #include "ResourceManager.h"
+#include "InputHandler.h"
 
 class Game {
 public:
@@ -30,6 +31,7 @@ private:
     int winHeight;
     bool runFlag;
     ResourceManager* res;
+    InputHandler* inputHandler;
 
 };
 
