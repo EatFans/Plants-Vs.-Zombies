@@ -7,7 +7,7 @@
 
 Game::Game() : winWidth(WIN_WIDTH), winHeight(WIN_HEIGHT), runFlag(true) {
     // 初始化对象，加载资源
-    initgraph(winWidth,winHeight,1);
+    initgraph(winWidth, winHeight, 1);
     res = new ResourceManager();
     inputHandler = new InputHandler();
     sceneManager = new SceneManager();
@@ -57,7 +57,7 @@ void Game::renderLoop() {
     while(runFlag){
         BeginBatchDraw();
         putimage(0,0,res->getImg("hub"));
-        putimage(474,75,res->getImg("button_0"));
+        Render::putimagePNG(474,75,res->getImg("button_0"));
         EndBatchDraw();
         std::this_thread::sleep_for(std::chrono::microseconds(DELAY_TIME));
     }

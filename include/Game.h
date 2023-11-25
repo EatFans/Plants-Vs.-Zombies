@@ -12,6 +12,9 @@
 #include "ResourceManager.h"
 #include "InputHandler.h"
 #include "SceneManager.h"
+#include "Render.h"
+
+#include "HubScene.h"
 
 class Game {
 public:
@@ -31,8 +34,6 @@ private:
     ResourceManager* res;
     InputHandler* inputHandler;
     SceneManager* sceneManager;
-
-
 };
 
 

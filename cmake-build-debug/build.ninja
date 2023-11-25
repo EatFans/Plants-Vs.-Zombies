@@ -91,6 +91,20 @@ build CMakeFiles/Plants_Vs__Zombies.dir/src/engine/InputHandler.cpp.obj: CXX_COM
   OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
   OBJECT_FILE_DIR = CMakeFiles\Plants_Vs__Zombies.dir\src\engine
 
+build CMakeFiles/Plants_Vs__Zombies.dir/src/HubScene.cpp.obj: CXX_COMPILER__Plants_Vs__Zombies_Debug B$:/Clion$ Projects/Plants-Vs.-Zombies/src/HubScene.cpp || cmake_object_order_depends_target_Plants_Vs__Zombies
+  DEP_FILE = CMakeFiles\Plants_Vs__Zombies.dir\src\HubScene.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"B:/Clion Projects/Plants-Vs.-Zombies/include" -I"B:/Clion Projects/Plants-Vs.-Zombies/include/json"
+  OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
+  OBJECT_FILE_DIR = CMakeFiles\Plants_Vs__Zombies.dir\src
+
+build CMakeFiles/Plants_Vs__Zombies.dir/src/engine/Render.cpp.obj: CXX_COMPILER__Plants_Vs__Zombies_Debug B$:/Clion$ Projects/Plants-Vs.-Zombies/src/engine/Render.cpp || cmake_object_order_depends_target_Plants_Vs__Zombies
+  DEP_FILE = CMakeFiles\Plants_Vs__Zombies.dir\src\engine\Render.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"B:/Clion Projects/Plants-Vs.-Zombies/include" -I"B:/Clion Projects/Plants-Vs.-Zombies/include/json"
+  OBJECT_DIR = CMakeFiles\Plants_Vs__Zombies.dir
+  OBJECT_FILE_DIR = CMakeFiles\Plants_Vs__Zombies.dir\src\engine
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Plants_Vs__Zombies
@@ -99,7 +113,7 @@ build CMakeFiles/Plants_Vs__Zombies.dir/src/engine/InputHandler.cpp.obj: CXX_COM
 #############################################
 # Link the executable Plants_Vs__Zombies.exe
 
-build Plants_Vs__Zombies.exe: CXX_EXECUTABLE_LINKER__Plants_Vs__Zombies_Debug CMakeFiles/Plants_Vs__Zombies.dir/src/Game.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/LogManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/ResourceManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/SceneManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/test/test.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/InputHandler.cpp.obj
+build Plants_Vs__Zombies.exe: CXX_EXECUTABLE_LINKER__Plants_Vs__Zombies_Debug CMakeFiles/Plants_Vs__Zombies.dir/src/Game.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/LogManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/ResourceManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/SceneManager.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/test/test.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/InputHandler.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/HubScene.cpp.obj CMakeFiles/Plants_Vs__Zombies.dir/src/engine/Render.cpp.obj
   FLAGS = -g
   LINK_FLAGS = -static-libgcc -static-libstdc++
   LINK_LIBRARIES = -Wl,-Bstatic  -leasyx  -lpthread  -ljsoncpp  -Wl,-Bdynamic  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
