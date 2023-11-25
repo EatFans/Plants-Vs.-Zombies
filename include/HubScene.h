@@ -9,6 +9,7 @@
 #include "ResourceManager.h"
 #include "LogManager.h"
 #include "LogManager.h"
+#include <memory>
 
 class HubScene {
 public:
@@ -18,7 +19,7 @@ public:
     void render();
 private:
     IMAGE* background;
-    ResourceManager res;
+    std::unique_ptr<ResourceManager> res;
 };
 
 

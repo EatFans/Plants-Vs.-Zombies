@@ -11,12 +11,14 @@ Game::Game() : winWidth(WIN_WIDTH), winHeight(WIN_HEIGHT), runFlag(true) {
     res = new ResourceManager();
     inputHandler = new InputHandler();
     sceneManager = new SceneManager();
+    hub = new HubScene();
 }
 
 Game::~Game() {
     delete res;
     delete inputHandler;
     delete sceneManager;
+    delete hub;
 }
 
 // 游戏初始化
@@ -39,6 +41,8 @@ void Game::run() {
     std::thread renderThread(&Game::renderLoop,this);
     std::thread backgroundThread(&Game::backgroundLoop,this);
     LogManager::info("游戏主线程已经启动！");
+
+    hub->init();
 
     while(runFlag){
 

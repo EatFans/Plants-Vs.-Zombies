@@ -34,6 +34,7 @@ private:
     ResourceManager* res;
     InputHandler* inputHandler;
     SceneManager* sceneManager;
+    HubScene* hub;
 };
 
 
