@@ -10,7 +10,6 @@
  *
  */
 ResourceManager::ResourceManager() {
-    image = new IMAGE();
 }
 
 /**
@@ -32,6 +31,7 @@ ResourceManager::~ResourceManager() {
 void ResourceManager::loadImg(const std::string& resourceName,const std::string& resourcePath) {
     auto it = imageMap.find(resourceName);
     if (it == imageMap.end()){
+        image = new IMAGE();
         loadimage(image,resourcePath.c_str());
         imageMap[resourceName] = image;
 //        LogManager::info("图片资源加载成功！");

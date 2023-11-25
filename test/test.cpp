@@ -1,21 +1,25 @@
 /*
-#include "json/json.h"
-#include "ResourceManager.h"
-#include "LogManager.h"
+#include "graphics.h"
+#include "easyx.h"
+#include <iostream>
 
-using namespace std;
-int main(){
-    Json::Value json = ResourceManager::parseJsonFile("res/resource.json");
-    // 访问解析后的数据
-    const Json::Value resources = json["resources"];
-    for (const auto& resource : resources) {
-        std::string name = resource["name"].asString();
-        std::string path = resource["path"].asString();
-        LogManager::info("资源名称：" + name);
-        LogManager::info("资源路径：" + path);
+void startUI(){
+    IMAGE imgBg, imgButton;
+    loadimage(&imgBg,"res/Ui/hub.png");
+    loadimage(&imgButton,"res/Ui/Adventure_0.png");
+    while (true){
+        BeginBatchDraw();
+        putimage(0,0,&imgBg);
+        putimage(475,75,&imgButton);
+        EndBatchDraw();
     }
 
+}
+
+int main()
+{
+    initgraph(900,600);
+    startUI();
     system("pause");
     return 0;
-}
-*/
+}*/

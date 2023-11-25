@@ -2,7 +2,15 @@
 	"resources": [
 		{
 			"name": "hub",
-			"path": "res/ui/hub.png"
+			"path": "res/Ui/hub.png"
+		},
+		{
+			"name": "button_0",
+			"path": "res/Ui/button_0.png"
+		},
+		{
+			"name": "button_1",
+			"path": "res/Ui/button_1.png"
 		}
 
 	]

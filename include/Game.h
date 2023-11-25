@@ -11,6 +11,7 @@
 #include "easyx.h"
 #include "ResourceManager.h"
 #include "InputHandler.h"
+#include "SceneManager.h"
 
 class Game {
 public:
@@ -22,7 +23,6 @@ private:
     const int WIN_WIDTH = 900;
     const int WIN_HEIGHT = 600;
     const int DELAY_TIME = 16;
-    void mainLoop();
     void renderLoop();
     void backgroundLoop();
     int winWidth;
@@ -30,6 +30,8 @@ private:
     bool runFlag;
     ResourceManager* res;
     InputHandler* inputHandler;
+    SceneManager* sceneManager;
+
 
 };
 

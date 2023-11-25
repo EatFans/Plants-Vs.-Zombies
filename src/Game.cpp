@@ -10,11 +10,13 @@ Game::Game() : winWidth(WIN_WIDTH), winHeight(WIN_HEIGHT), runFlag(true) {
     initgraph(winWidth,winHeight,1);
     res = new ResourceManager();
     inputHandler = new InputHandler();
+    sceneManager = new SceneManager();
 }
 
 Game::~Game() {
     delete res;
     delete inputHandler;
+    delete sceneManager;
 }
 
 // 游戏初始化
@@ -36,31 +38,27 @@ void Game::run() {
     // 启动线程
     std::thread renderThread(&Game::renderLoop,this);
     std::thread backgroundThread(&Game::backgroundLoop,this);
-    mainLoop();
+    LogManager::info("游戏主线程已经启动！");
+
+    while(runFlag){
+
+
+        std::this_thread::sleep_for(std::chrono::microseconds(DELAY_TIME));
+    }
 
     // 释放清理线程
     renderThread.join();
     backgroundThread.join();
 }
 
-// 游戏主线程
-void Game::mainLoop() {
-    LogManager::info("游戏主线程已经启动！");
-    while(runFlag){
-
-
-        std::this_thread::sleep_for(std::chrono::microseconds(DELAY_TIME));
-    }
-}
-
 // 游戏渲染
 void Game::renderLoop() {
     LogManager::info("游戏渲染线程已经启动！");
-    IMAGE* image = res->getImg("hub");
     while(runFlag){
-
-        putimage(0,0,image);
-
+        BeginBatchDraw();
+        putimage(0,0,res->getImg("hub"));
+        putimage(474,75,res->getImg("button_0"));
+        EndBatchDraw();
         std::this_thread::sleep_for(std::chrono::microseconds(DELAY_TIME));
     }
 }
