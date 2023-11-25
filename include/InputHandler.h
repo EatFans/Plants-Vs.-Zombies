@@ -24,6 +24,8 @@ public:
     int getMouseX();
     int getMouseY();
     MouseLeftButtonState getMouseLeftButtonState();
+    bool isMouseLeftButtonDown();
+    bool isMOuseLeftButtonUp();
 private:
     int x;
     int y;
