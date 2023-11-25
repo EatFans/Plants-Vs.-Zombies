@@ -4,6 +4,7 @@
 
 #include "Game.h"
 
+
 Game::Game() : winWidth(WIN_WIDTH), winHeight(WIN_HEIGHT), runFlag(true) {
     // 初始化对象，加载资源
     initgraph(winWidth,winHeight,1);

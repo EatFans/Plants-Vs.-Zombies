@@ -5,10 +5,6 @@
 #ifndef PLANTS_VS__ZOMBIES_GAME_H
 #define PLANTS_VS__ZOMBIES_GAME_H
 
-#define WIN_WIDTH 900
-#define WIN_HEIGHT 600
-#define DELAY_TIME 16
-
 #include <iostream>
 #include <thread>
 #include "LogManager.h"
@@ -23,6 +19,9 @@ public:
     void init();
     void run();
 private:
+    const int WIN_WIDTH = 900;
+    const int WIN_HEIGHT = 600;
+    const int DELAY_TIME = 16;
     void mainLoop();
     void renderLoop();
     void backgroundLoop();
