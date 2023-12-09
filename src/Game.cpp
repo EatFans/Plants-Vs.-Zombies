@@ -8,7 +8,7 @@
 Game::Game() : winWidth(WIN_WIDTH), winHeight(WIN_HEIGHT), runFlag(true) {
     // 初始化对象，加载资源
     initgraph(winWidth, winHeight, 1);
-    res = new ResourceManager();
+    res = new ResourceManager2();
     inputHandler = new InputHandler();
     sceneManager = new SceneManager();
     hub = new HubScene();
@@ -24,7 +24,7 @@ Game::~Game() {
 // 游戏初始化
 void Game::init() {
     LogManager::info("游戏资源正在加载中...");
-    Json::Value resJson = ResourceManager::parseJsonFile("res/resource.json");
+    Json::Value resJson = ResourceManager2::parseJsonFile("res/resource.json");
     // 访问解析后的数据
     const Json::Value resources = resJson["resources"];
     for (const auto& resource : resources) {
@@ -60,8 +60,8 @@ void Game::renderLoop() {
     LogManager::info("游戏渲染线程已经启动！");
     while(runFlag){
         BeginBatchDraw();
-        putimage(0,0,res->getImg("hub"));
-        Render::putimagePNG(474,75,res->getImg("button_0"));
+//        putimage(0,0,res->getImg("hub"));
+//        Render::putimagePNG(474,75,res->getImg("button_0"));
         EndBatchDraw();
         std::this_thread::sleep_for(std::chrono::microseconds(DELAY_TIME));
     }
@@ -78,6 +78,7 @@ void Game::backgroundLoop() {
     }
 }
 
+/*
 int main() {
     //创建游戏对象
     Game game;
@@ -86,3 +87,4 @@ int main() {
     system("pause");
     return 0;
 }
+*/

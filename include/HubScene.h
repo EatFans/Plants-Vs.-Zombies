@@ -6,7 +6,7 @@
 #define PLANTS_VS__ZOMBIES_HUBSCENE_H
 
 #include "easyx.h"
-#include "ResourceManager.h"
+#include "ResourceManager2.h"
 #include "LogManager.h"
 #include "LogManager.h"
 #include <memory>
@@ -18,8 +18,7 @@ public:
     void init();
     void render();
 private:
-    IMAGE* background;
-    std::unique_ptr<ResourceManager> res;
+    std::unique_ptr<ResourceManager2> res;
 };
 
 

@@ -3,10 +3,8 @@
 //
 
 #include "HubScene.h"
-
 HubScene::HubScene(){
-    res = std::make_unique<ResourceManager>();
-    background = nullptr;
+    res = std::make_unique<ResourceManager2>();
 }
 
 HubScene::~HubScene() {
@@ -15,7 +13,6 @@ HubScene::~HubScene() {
 
 void HubScene::init() {
 
-    background = res->getImg("hub");
 
     LogManager::info("¿ªÊ¼²âÊÔ£¡");
     if (res->getImg("hub") != nullptr){
@@ -26,5 +23,6 @@ void HubScene::init() {
 }
 
 void HubScene::render(){
-    putimage(0,0,background);
+//    IMAGE* background = res->getImg("hub");
+//    putimage(0,0,background);
 }

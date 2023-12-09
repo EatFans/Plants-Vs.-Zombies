@@ -1,29 +1,26 @@
 //
-// Created by EatFan on 2023/11/12.
+// Created by EatFan on 2023/12/9.
 //
 
 #ifndef PLANTS_VS__ZOMBIES_RESOURCEMANAGER_H
 #define PLANTS_VS__ZOMBIES_RESOURCEMANAGER_H
 
-#include <map>
-#include <string>
-#include "easyx.h"
 #include "graphics.h"
-#include "LogManager.h"
-#include "json/json.h"
+#include "easyx.h"
 
-class ResourceManager {
-public:
-    ResourceManager();
-    ~ResourceManager();
-    static Json::Value parseJsonFile(const std::string& filePath);
-    void loadImg(const std::string& resourceName,const std::string& resourcePath);
-    IMAGE* getImg(const std::string& resourceName);
-private:
-    IMAGE* image;
-    std::map<std::string, IMAGE*> imageMap;
+namespace Engine
+{
+    class ResourceManager
+    {
+    public:
+        ResourceManager();
+        ~ResourceManager();
 
-};
+    private:
+        IMAGE* img;
+    };
+}
+
 
 
 #endif //PLANTS_VS__ZOMBIES_RESOURCEMANAGER_H

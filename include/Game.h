@@ -9,7 +9,7 @@
 #include <thread>
 #include "LogManager.h"
 #include "easyx.h"
-#include "ResourceManager.h"
+#include "ResourceManager2.h"
 #include "InputHandler.h"
 #include "SceneManager.h"
 #include "Render.h"
@@ -31,7 +31,7 @@ private:
     int winWidth;
     int winHeight;
     bool runFlag;
-    ResourceManager* res;
+    ResourceManager2* res;
     InputHandler* inputHandler;
     SceneManager* sceneManager;
     HubScene* hub;

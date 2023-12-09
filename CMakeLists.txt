@@ -10,13 +10,15 @@ set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 # 设置源文件
 set(SOURCES
         src/Game.cpp
-        src/LogManager.cpp
-        src/engine/ResourceManager.cpp
+        src/engine/LogManager.cpp
+        src/engine/ResourceManager2.cpp
         src/engine/SceneManager.cpp
         test/test.cpp
         src/engine/InputHandler.cpp
         src/HubScene.cpp
-        src/engine/Render.cpp)
+        src/engine/Render.cpp
+        src/main.cpp src/GameManager.cpp
+        src/engine/ResourceManager.cpp)
 
 # 设置头文件目录
 include_directories(include)
